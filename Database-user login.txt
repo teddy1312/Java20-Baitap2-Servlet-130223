@@ -1,0 +1,20 @@
+CREATE DATABASE bt_login;
+
+USE bt_login;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    fullname VARCHAR(50) NOT NULL,
+    phone VARCHAR(20),
+    address VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO users(email,password,fullname,phone,address)
+		  VALUES ("ted13@gmail.com","1312","Ted Nguyễn","0763123456","Quận 1, HCM");
+INSERT INTO users(email,password,fullname,phone,address)
+		  VALUES ("flynn06@gmail.com","0306","Flynn Trần","0935987654","Tây Hồ, Hà Nội");
+INSERT INTO users(email,password,fullname,phone,address)
+		  VALUES ("lisa27@gmail.com","1997","Lisa Lê","0898333666","Quận 3, Đà Nẵng");

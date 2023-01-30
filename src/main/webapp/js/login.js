@@ -14,7 +14,7 @@ $(document).ready(function (){
         }).done(function (data){
             if (data.statusCode == 200) {
                 alert('Email ' + data.data + ' không tồn tại hoặc mật khẩu không đúng. Vui lòng nhập lại!')
-                document.getElementById("enter-account").value = ''
+                //document.getElementById("enter-account").value = ''
                 document.getElementById("enter-password").value = ''
             } else if (data.statusCode == 500) {
                 window.location.href = data.data

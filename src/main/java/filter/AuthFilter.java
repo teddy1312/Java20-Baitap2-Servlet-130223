@@ -12,18 +12,18 @@ public class AuthFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("Filter worked");
+        //System.out.println("Filter worked");
         HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
 
         HttpSession session = httpRequest.getSession();
-        String userAccount = (String) session.getAttribute("email");
-        if(userAccount != null){
+        String email = (String) session.getAttribute("email");
+        if(email != null){
             filterChain.doFilter(httpRequest,httpResponse);
-            System.out.println("Go to user info page");
+            //System.out.println("Go to user info page");
         } else{
             httpResponse.sendRedirect(httpRequest.getContextPath()+"/login");
-            System.out.println("Send back to login page");
+            //System.out.println("Send back to login page");
         }
     }
 

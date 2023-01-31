@@ -15,10 +15,11 @@
         <div class="col-md-5 m-auto mt-5">
           <h3 class="text-center">ĐĂNG NHẬP HỆ THỐNG</h3>
           <div class="p-4 border mt-4">
-            <form action="<%=request.getContextPath()%>/login" method="post" >
+              <form>
+<%--            <form action="<%=request.getContextPath()%>/login" method="post" >--%>
                 <div class="form-group">
                   <label>Email</label>
-                  <input id="enter-account" type="email" class="form-control" name="email">
+                  <input id="enter-email" type="email" class="form-control" name="email">
                 </div>
                 <div class="form-group">
                   <label>Mật khẩu</label>
